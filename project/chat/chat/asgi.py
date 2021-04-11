@@ -25,4 +25,4 @@ application = ProtocolTypeRouter({
                 main.routing.websocket_urlpatterns
         )
     ),
-})
+})2
