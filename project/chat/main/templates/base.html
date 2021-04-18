@@ -19,6 +19,9 @@
 		</div>
     <div class="chat-grid">
       <div class="chats chat-grid-object">
+        {% if chat_number == 0 %}
+        <p><i><center>You don't have any chats yet.</center></i></p>
+        {% endif %}
         {% for chat in chats %}
           <div class="chat">
             <div class="title">{{ chat.chat_name }}</div><br>
