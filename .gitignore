@@ -124,5 +124,5 @@ dmypy.json
 .pyre/
 
 # custom config
-
+project/chat_env/
 
