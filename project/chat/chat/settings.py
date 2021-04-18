@@ -33,11 +33,11 @@ ALLOWED_HOSTS = ["chat.codeisamazing.repl.co", "chat--codeisamazing.repl.co", '1
 # Application definition
 
 INSTALLED_APPS = [
-	'chat',
-	'channels',
-	'rest_framework',
+	# 'chat',
+	# 'channels',
+	# 'rest_framework',
 	'new_chat.apps.NewChatConfig',
-	'crispy_forms',
+	# 'crispy_forms',
 	'sign_up.apps.SignUpConfig',
 	'login.apps.LoginConfig',
 	'main.apps.MainConfig',
