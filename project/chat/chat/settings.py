@@ -79,7 +79,6 @@ TEMPLATES = [
             ],
         },
     },
-]
 
 WSGI_APPLICATION = 'chat.wsgi.application'
 
@@ -92,7 +91,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'chat_db',
 		'USER': 'william',
-		'PASSWORD': 'Fishingisgreat',
+		'PASSWORD': ,
     }
 }
 
