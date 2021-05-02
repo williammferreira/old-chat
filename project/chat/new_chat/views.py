@@ -1,15 +1,14 @@
 import random
 from django.shortcuts import render, redirect
-# from django.http import HttpResponse
+from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from main.models import chats as all_chats
 from main.models import chats
 from .forms import UserChatsForm
 from .dates import getdatenow
-# from django.utils import timezone
+from django.utils import timezone
 
 # Create your views here.
-# print(timezone.now())
 
 @login_required
 def main(request):
@@ -19,9 +18,9 @@ def main(request):
 		if form.is_valid():
 			users = form.cleaned_data.get('Invites')
 			name = form.cleaned_data.get('Chat_Name')
+
 			characters = "1234567890qwertyuiopasdfghjklzxcvbnm"
 			url = ""
-
 			for i in range(0, 100):
 				url = url + characters[random.randint(0,len(characters)-1)]
 			chat_1 = chats(
@@ -36,10 +35,9 @@ def main(request):
 			return redirect("main")
 
 	form = UserChatsForm()
-	UserChatsForm()
 	data = {
 		"form": form,
-		'chat_number': all_chats.objects.all(),
+		'chat_number': len(all_chats.objects.filter(chat_creator = request.user.username)),
 		'first_name': request.user.first_name,
 		'last_name': request.user.last_name,
 		'username': request.user.username,
